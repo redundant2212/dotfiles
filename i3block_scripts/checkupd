@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "upd: $(checkupdates | wc -l)" ;
+
+case $BLOCK_BUTTON in 
+		1) termite -e 'htop' ;;
+esac
+
+
+

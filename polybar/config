@@ -1,0 +1,290 @@
+;=========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+;==========================================================
+
+[colors]
+#background = ${xrdb:color0:#000}
+background = #000
+background-alt = #444
+foreground = #ffffff
+#foreground = ${xrdb:color7:#ffffff}
+#foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/dbar]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 27
+;offset-x = 1%
+#offset-y = 10%
+radius = 0.0
+fixed-center = true
+
+bottom = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 4
+line-color = #f00
+
+border-size = 0
+border-color = #ffffff
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-ight = 1
+
+;font-0 = "Font Awesome 5 Free:size=14:style=Solid:pixelsize=11;1"
+;font-1 = "HackNerdFont:size=14:pixelsize=10;1"
+;font-2 = "Font Awesome 5 Brands:pixelsize=8;
+#font-1 = la\-solid\-900:style=Regular;size=22px;pixelsize=40px;2
+
+font-0 = Roboto:weight=Regular:size=11;2
+font-1 = Material Icons;style=Regular;size=14;2
+font-2 = NotoSansMono Nerd Font:size=14:style=Regular:pixelsize=15;3
+
+modules-left = i3 xwindow
+#modules-left = ewmh
+#modules-center = date
+modules-right = filesystem memory date
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+;override-redirect = true
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+format-padding = 3
+format-underline = #ffffff
+
+[module/battery]
+type = custom/script 
+format-prefix = "bat: "
+format = <label>
+exec = acpi | awk '{print $4}' | sed 's/,//'
+click-right = exec xfce4-power-manager-settings &
+format-padding = 3 
+format-prefix-padding = 1
+format-prefix-foreground = #FFEC00
+
+[module/xwindow]
+type = internal/xwindow
+label =  %title:0:30:...%
+label-padding = 3
+
+[module/ewmh]
+
+type = internal/xworkspaces
+format = <label-state>
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+
+label-active = 
+label-occupied = ﱤ
+label-urgent = 
+label-empty = ﱴ
+
+label-active-padding = 1
+label-occupied-padding = 1
+label-urgent-padding = 1
+label-empty-padding = 1
+
+;label-active-foreground = #3D9AE8
+;label-active-foreground = #00DD37
+label-active-foreground = #FFFD00
+label-urgent-foreground = #FF1000
+label-empty-foreground = #000000
+label-occupied-foreground = #FFFD00
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+;pin-workspaces = true
+label-focused = %index%
+label-unfocused = %index%
+label-urgent = %index%
+label-visible = %index%
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+#label-focused-overline = ${xrdb:color6:#777} 
+#label-focused-background = ${xrdb:color6:#777}
+#label-focused-underline =${xrdb:color6:#777}
+label-focused-underline = #6E6B6B
+label-focused-overline = #6E6B6B
+label-focused-background = #6E6B6B
+label-focused-foreground = #fff
+label-focused-padding = 2
+label-unfocused-padding = 2
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+label-urgent-background = #FFF700
+label-urgent-foreground = #000
+label-urgent-padding = 2
+
+[module/memory]
+type = internal/memory
+interval = 2
+format = <label>
+format-prefix= " "
+label = %percentage_used%%
+label-click-left = exec termite &
+
+#format-prefix-overline = ${colors.background}
+#format-overline = ${colors.background}
+#format-prefix-underline = ${colors.background}
+#format-underline = ${colors.background}
+format-underline = #FF9400
+format-prefix-foreground = ${colors.primary} 
+format-padding = 2
+format-background = #2B332D
+format-margin = 0
+
+[module/date]
+type = internal/date
+interval = 5
+date = 
+date-alt = " %d-%m-%Y %A"
+
+time = %I:%M %p
+time-alt = %I:%M
+#format-prefix = ""
+#format-background = $(background) 
+#format-background = "#37382A"
+label = %date% %time%
+
+#format-prefix-overline = ${colors.background}
+#format-overline = ${colors.background}
+format-prefix-underline = ${colors.background}
+#format-underline = ${colors.background}
+format-underline = #FF0000
+format-prefix-foreground = #FFFFFF 
+format-padding = 2
+format-background = #2B332D
+format-margin = 0
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+label-padding = 2
+interval = 2
+label = CPU : %percentage%%
+
+format-prefix-overline = ${colors.background}
+format-overline = ${colors.background}
+format-prefix-underline = ${colors.background}
+format-underline = ${colors.background}
+format-prefix-foreground = #FFFFFF 
+#format-background = #2B332D
+format-margin = 0
+
+[module/spotify]
+type= custom/script
+exec=/home/redundant/Programs/spotify-module
+format= <label>
+format-padding = 2
+interval = 2
+label-foreground = #1DDD54
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = true
+
+; Spacing between entries
+; Default: 2
+spacing = 4
+; Available tags:
+;   <label-mounted> (default)
+;   <bar-free>
+;   <bar-used>
+;   <ramp-capacity>
+format-mounted = <label-mounted>
+format-mounted-background = #2B332D
+#format-mounted-overline = ${colors.background}
+format-mounted-underline = #0DD3A9
+format-mounted-padding = 2
+; Available tags:
+;   <label-unmounted> (default)
+format-unmounted = <label-unmounted>
+
+; Available tokens:
+;   %mountpoint%
+;   %type%
+;   %fsname%
+;   %percentage_free%
+;   %percentage_used%
+;   %total%
+;   %free%
+;   %used%
+; Default: %mountpoint% %percentage_free%%
+label-mounted =   %percentage_used%%
+label-mounted-foreground = #00FFDD
+; Available tokens:
+;   %mountpoint%
+; Default: %mountpoint% is not mounted
+label-unmounted = %mountpoint%: not mounted
+label-unmounted-foreground = #55
+
+[settings]
+;screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

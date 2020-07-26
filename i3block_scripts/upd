@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in 
+		1) termite -e 'sudo pacman -Syyu' && pacman -Qu | wc -l > ~/updates_available && pkill -RTMIN+9 i3blocks ;;
+esac
+
+pacman -Qu | wc -l | sed -e '/^0$/d' > ~/updates_available && pkill -RTMIN+9 i3blocks
+
+cat ~/updates_available | sed -e "/^$/d"

@@ -1,0 +1,254 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/redundant/
+	..
+1595608637
+'b
+	/home/redundant/bin/
+	..
+1595608637
+'c
+	/home/redundant/.config
+	..
+1595661582
+'h
+	/home/redundant/
+	..
+1595608637
+'z
+	/home/redundant/.config/vifm
+	..
+1595608637
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/redundant/.config/gtk-3.0
+	..
+0
+d/home/redundant/.config/htop
+	htoprc
+1
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	nKgJle0.jpg
+12
+d/home/redundant
+	wa
+6
+d/home
+	redundant
+2
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	nKgJle0.jpg
+12
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	nKgJle0.jpg
+12
+d/home/redundant
+	Programs
+4
+d/home/redundant/Programs
+	..
+0
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	cyberpunk2.png
+8
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	wallpaper-spot-faded-light-dull-1579944363-1366x768.jpg
+16
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	bbx2m68tjt951.jpg
+4
+d/home/redundant
+	dd.rem
+9
+d/home
+	redundant
+2
+d/
+	home
+4
+d/home
+	redundant
+2
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	cyberpunk1.png
+7
+d/home/redundant
+	todo_apps
+13
+d/home
+	redundant
+2
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	c8j4bmennra51.png
+6
+d/home/redundant
+	wa
+6
+d/home/redundant/wa
+	c8j4bmennra51.png
+6
+d/home/redundant
+	arch_ascii
+7
+d/home
+	redundant
+2
+d/home/redundant
+	.config
+2
+d/home/redundant/.config
+	..
+0
+d/home/redundant
+	.getlyrics
+3
+d/home/redundant/.config
+	qalculate
+25
+d/home/redundant/.config/qalculate
+	qalc.cfg
+1
+d/home/redundant/.config
+	vifm
+25
+d/home/redundant/.config/vifm
+	vifmrc
+7
+d/home/redundant/.config
+	vifm
+25
+d/home/redundant
+	.cache
+1
+d/home
+	redundant
+2
+d/
+	home
+4
+d/home
+	redundant
+2
+d/home/redundant
+	.cache
+1
+d/home/redundant/.cache
+	..
+0
+d/home/redundant
+	dheeraj
+23
+d/home/redundant/dheeraj
+	python
+2
+d/home/redundant/dheeraj/python
+	reminder.py
+4
+d/home/redundant/dheeraj
+	python
+2
+d/home/redundant
+	dheeraj
+23
+d/home
+	redundant
+2
+d/
+	home
+4
+d/home/redundant
+	.config
+2
+d/home/redundant/.config
+	bashtop
+4
+d/home/redundant/.config/bashtop
+	..
+0
+d/home/redundant/.config
+	htop
+14
+d/home/redundant/.config/htop
+	htoprc
+1
+d
+
+# Right window history (oldest to newest):
+D/home/redundant
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:rename d
+:sort
+:q
+
+# Search history (oldest to newest):
+/simple
+/vifm
+/dheerah
+/dheer
+/.config
+/htop
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/redundant/.local/share/vifm/Trash/000_d
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/redundant/.local/share/vifm/Trash/000_d
+	/home/redundant/d
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].1
+]F
+s0

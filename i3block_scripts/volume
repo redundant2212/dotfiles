@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "VOL: $(ponymix | grep sink -A 2 | grep Volume | cut -c 16-)"
+
+case $BLOCK_BUTTON in 
+		1) termite -e pulsemixer &
+esac
+		

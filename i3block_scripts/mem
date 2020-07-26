@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "Mem: $(free -m | awk 'NR==2{printf "%.2f%%\n", $3*100/$2'})"; 
+
+case $BLOCK_BUTTON in 
+		1) termite -e htop & 
+esac
